@@ -1,4 +1,6 @@
 var gulp = require('gulp');
+
+
 browserSync = require('browser-sync');
 // Static server
 gulp.task('browser-sync', function () {
@@ -11,5 +13,6 @@ gulp.task('browser-sync', function () {
     //监听任何文件变化，实时刷新页面
     gulp.watch("./bin/**/*.*").on('change', browserSync.reload);
 });
+
 
 gulp.task('default', ['browser-sync']);
